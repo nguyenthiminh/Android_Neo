@@ -3,9 +3,9 @@ package com.contactsmanager.quanlydanhba.model;
 public class UserContact {
     private int id;
     private String name;
-    private long phoneNumber;
+    private String phoneNumber;
 
-    public UserContact(int id, String name, long phoneNumber) {
+    public UserContact(int id, String name, String phoneNumber) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -27,11 +27,11 @@ public class UserContact {
         this.name = name;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

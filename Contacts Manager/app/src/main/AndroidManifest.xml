@@ -3,13 +3,14 @@
     package="com.contactsmanager.quanlydanhba">
 
     <application
+        android:name=".utils.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".features.contacts.show_list_contac.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

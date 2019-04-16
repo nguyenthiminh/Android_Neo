@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/bg_top_dialog_with_shadow"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_open"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <TextView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/name"
+            android:textColor="#000"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="#a4a4a4" />
+
+    <LinearLayout
+        android:id="@+id/layout_uninstall"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <TextView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/phoneNumber"
+            android:textColor="#000"
+            android:textSize="@dimen/_12sdp" />
+
+        <EditText
+            android:id="@+id/edt_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:maxLength="10"
+            android:hint="@string/phoneNumber"
+            android:inputType="number"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_32sdp">
+        <Button
+            android:layout_width="@dimen/_80sdp"
+            android:textSize="@dimen/_14sdp"
+            android:text="Update"
+            android:textColor="#fff"
+            android:id="@+id/btn_update"
+            android:background="@drawable/rect_bound_primary"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="@dimen/_80sdp"
+            android:textSize="@dimen/_14sdp"
+            android:text="Cancel"
+            android:textColor="#fff"
+            android:id="@+id/btn_cancel"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:background="@drawable/rect_bound_primary"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_44sdp"
+        android:layout_marginEnd="@dimen/_12sdp" />
+
+</LinearLayout>

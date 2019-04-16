@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String CREATE_CONTACT_TABLE = "CREATE TABLE " + TABLE_CONTACT + "("
                 + USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + USER_NAME + " TEXT NOT NULL, "
-                + USER_PHONE_NUMBER + " INTEGER NOT NULL"
+                + USER_PHONE_NUMBER + " TEXT NOT NULL"
                 + ")";
 
         sqLiteDatabase.execSQL(CREATE_CONTACT_TABLE);

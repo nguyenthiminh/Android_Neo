@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">QuanLy DanhBa</string>
+    <string name="app_name">Contacts Manager</string>
+    <string name="name">Name Contact</string>
+    <string name="phoneNumber">Phone Number</string>
 </resources>

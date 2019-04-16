@@ -6,11 +6,12 @@ import java.util.List;
 
 public class QueryContract {
 
-    public interface StudentQuery {
+    public interface ContactQuery {
         void createContact(UserContact userContact, QueryResponse<Boolean> response);
         void readAllContact(QueryResponse<List<UserContact>> response);
         void updateContact(UserContact userContact, QueryResponse<Boolean> response);
         void deleteContact(int contactId, QueryResponse<Boolean> response);
+        void deleteAllContact(QueryResponse<Boolean> response);
     }
 
 }
