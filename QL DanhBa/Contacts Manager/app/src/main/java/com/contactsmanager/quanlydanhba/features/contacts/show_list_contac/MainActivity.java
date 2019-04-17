@@ -7,6 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -27,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements ContactCrudListen
     private ContactListAdapter adapter;
     private RecyclerView rcv_contact;
     private List<UserContact> userContactList = new ArrayList<>();
-    private ImageView iv_add, iv_deleteAll;
+    private ImageView iv_add;
     private Context mContext;
 
     @Override
@@ -42,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements ContactCrudListen
     private void init() {
         iv_add = findViewById(R.id.iv_add);
         rcv_contact = findViewById(R.id.rcv_contacts);
-        iv_deleteAll = findViewById(R.id.iv_deleteAll);
 
         adapter = new ContactListAdapter(mContext,userContactList, this);
         rcv_contact.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
@@ -56,12 +60,6 @@ public class MainActivity extends AppCompatActivity implements ContactCrudListen
             }
         });
 
-        iv_deleteAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showConfirmationDialog();
-            }
-        });
         showListContact();
     }
 
@@ -126,5 +124,46 @@ public class MainActivity extends AppCompatActivity implements ContactCrudListen
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.search_view);
+        MenuItem iv_deleteAll = menu.findItem(R.id.iv_deleteAll);
+
+        iv_deleteAll.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                showConfirmationDialog();
+                return false;
+            }
+        });
+
+
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (TextUtils.isEmpty(newText)) {
+                    showListContact();
+
+                } else {
+                    adapter.getFilter().filter(newText);
+                }
+                return false;
+            }
+        });
+
+        return true;
     }
 }
