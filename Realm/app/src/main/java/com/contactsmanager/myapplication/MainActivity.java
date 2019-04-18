@@ -32,6 +32,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
+import io.realm.OrderedCollectionChangeSet;
+import io.realm.OrderedRealmCollectionChangeListener;
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmResults;
@@ -41,18 +43,14 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
     private RecyclerView rcv_user;
     private UserListAdapter adapter;
     private List<User> userList = new ArrayList<>();
-    ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         realm = Realm.getDefaultInstance();
-
         init();
         getUser();
-        showUser();
     }
 
     private void init() {
@@ -65,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
     }
 
     private void getUser() {
+
         RequestQueue queue = Volley.newRequestQueue(this);
         final StringRequest request = new StringRequest(Request.Method.GET,
                 API.URL, new Response.Listener<String>() {
@@ -72,11 +71,12 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
             public void onResponse(String response) {
                 try {
                     realm.beginTransaction();
-                    User user = realm.where(User.class).findFirst();
-                    if (user == null) {
+                    RealmResults<User> results = realm.where(User.class).findAll();
+                    if (results.size() == 0) {
                         JSONArray jsonArray = new JSONArray(response);
                         for (int i = 0; i < jsonArray.length(); i++) {
                             try {
+
                                 JSONObject obj = jsonArray.getJSONObject(i);
 
                                 final String login = obj.getString("login");
@@ -93,14 +93,20 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
                                 UserDetail userDetail = getDetail(url);
                                 UserDetail u = realm.copyToRealm(userDetail);
                                 user1.getUserDetails().add(u);
+
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
                         }
-                    }
 
+                        showUser();
+                    }
+                    else {
+                        showUser();
+                    }
                     realm.commitTransaction();
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -133,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
                     userDetail.setId(id);
                     userDetail.setAvatar(avatar);
                     userDetail.setLogin(login);
-                    
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -156,19 +162,21 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
             userList.add(user);
         }
         adapter.notifyDataSetChanged();
+
     }
 
     @Override
     protected void onDestroy() {
-        realm.close();
         super.onDestroy();
+        realm.close();
     }
 
     @Override
     public void onClickItemUser(String url, String login) {
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-        intent.putExtra("abc", url);
+        intent.putExtra("url", url);
         intent.putExtra("login", login);
         startActivity(intent);
     }
+
 }

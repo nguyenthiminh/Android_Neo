@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import io.realm.RealmObject;
 
-public class UserDetail extends RealmObject{
+public class UserDetail extends RealmObject {
     private int id;
     private String login;
     private String avatar;

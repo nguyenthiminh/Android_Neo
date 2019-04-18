@@ -1,5 +1,7 @@
 package com.contactsmanager.myapplication.model;
 
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
 import io.realm.RealmList;

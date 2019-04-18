@@ -47,6 +47,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
             @Override
             public void onClick(View v) {
                 listener.onClickItemUser(user.getUrl(), user.getLogin());
+
             }
         });
     }
@@ -58,5 +59,6 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     public interface Listener{
         void onClickItemUser(String url, String login);
+
     }
 }

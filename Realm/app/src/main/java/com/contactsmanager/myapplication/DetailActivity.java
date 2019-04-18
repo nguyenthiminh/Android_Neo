@@ -3,6 +3,7 @@ package com.contactsmanager.myapplication;
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,11 +37,11 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         realm = Realm.getDefaultInstance();
-        url = getIntent().getStringExtra("abc");
+        url = getIntent().getStringExtra("url");
         login = getIntent().getStringExtra("login");
 
         init();
-//        showDetail(url);
+        showDetail(url);
         view();
 
     }
