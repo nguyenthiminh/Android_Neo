@@ -42,7 +42,6 @@ public class DetailActivity extends AppCompatActivity {
 
         init();
         showDetail(url);
-        view();
 
     }
 
@@ -75,6 +74,10 @@ public class DetailActivity extends AppCompatActivity {
                         userDetail.setId(id);
                         userDetail.setLogin(login);
                         userDetail.setAvatar(avatar);
+                        view();
+                    }
+                    else {
+                        view();
                     }
                     realm.commitTransaction();
                 } catch (JSONException e) {
@@ -97,14 +100,12 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     public void view(){
-        realm.beginTransaction();
         RealmResults<UserDetail> results = realm.where(UserDetail.class).equalTo("login", login).findAll();
         for (UserDetail userDetail : results) {
             Glide.with(DetailActivity.this).load(userDetail.getAvatar()).into(iv_avatar);
             tv_idUer.setText(userDetail.getId() + "");
             tv_name.setText(userDetail.getLogin());
         }
-        realm.commitTransaction();
     }
 
     @Override
