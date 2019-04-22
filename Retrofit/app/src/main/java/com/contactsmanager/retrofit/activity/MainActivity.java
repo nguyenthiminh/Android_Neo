@@ -68,11 +68,12 @@ public class MainActivity extends AppCompatActivity implements UserListAdapter.L
 
                     if (users.size() == 0) {
                         for (int i = 0; i < response.body().size(); i++) {
-                            User user = realm.createObject(User.class);
+                            User user = new User();
                             user.setId(response.body().get(i).getId());
                             user.setAvatar(response.body().get(i).getAvatar());
                             user.setLogin(response.body().get(i).getLogin());
                             user.setUrl(response.body().get(i).getUrl());
+                            realm.insertOrUpdate(user);
                         }
 
                         showListUser();

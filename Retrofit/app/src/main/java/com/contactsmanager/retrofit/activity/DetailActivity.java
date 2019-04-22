@@ -57,10 +57,11 @@ public class DetailActivity extends AppCompatActivity {
                     if(detail == null){
                         realm.beginTransaction();
 
-                        UserDetail userDetail = realm.createObject(UserDetail.class);
+                        UserDetail userDetail = new UserDetail();
                         userDetail.setId(response.body().getId());
                         userDetail.setAvatar(response.body().getAvatar());
                         userDetail.setLogin(response.body().getLogin());
+                        realm.insertOrUpdate(userDetail);
 
                         realm.commitTransaction();
                         showDetail();

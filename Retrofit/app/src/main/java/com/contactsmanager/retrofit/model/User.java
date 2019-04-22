@@ -3,6 +3,7 @@ package com.contactsmanager.retrofit.model;
 import com.google.gson.annotations.SerializedName;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class User extends RealmObject {
     @SerializedName("id")
