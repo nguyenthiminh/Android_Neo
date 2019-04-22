@@ -9,13 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.nguyenminh.mvpexample.R;
 import com.nguyenminh.mvpexample.model.entity.ItemImage;
 import com.nguyenminh.mvpexample.presenter.MainPresenter;
 import com.nguyenminh.mvpexample.ui.adapter.RecyclerAdapter;
-import com.nguyenminh.mvpexample.ui.viewVM.MainView;
+import com.nguyenminh.mvpexample.ui.viewvm.MainView;
 
 import java.util.List;
 

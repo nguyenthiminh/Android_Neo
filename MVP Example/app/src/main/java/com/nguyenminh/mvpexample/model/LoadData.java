@@ -5,5 +5,5 @@ import com.nguyenminh.mvpexample.model.entity.ItemImage;
 import java.util.List;
 
 public interface LoadData {
-    void onLoadDataSuccess(List<ItemImage> listDemo);
+    void onLoadDataSuccess(List<ItemImage> itemImages);
 }

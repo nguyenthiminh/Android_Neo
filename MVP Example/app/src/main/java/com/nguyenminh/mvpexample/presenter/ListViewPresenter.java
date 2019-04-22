@@ -7,17 +7,17 @@ import com.nguyenminh.mvpexample.ui.viewvm.MainView;
 
 import java.util.List;
 
-public class MainPresenter implements LoadData {
+public class ListViewPresenter implements LoadData {
     private DataImage dataImage;
     private MainView mainView;
 
-    public MainPresenter(MainView mainView) {
+    public ListViewPresenter(MainView mainView) {
         this.mainView = mainView;
         dataImage = new DataImage(this);
     }
 
     public void loadData() {
-        dataImage.createListData();
+        dataImage.createListData1();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.nguyenminh.mvpexample.ui.viewVM;
+package com.nguyenminh.mvpexample.ui.viewvm;
 
 import com.nguyenminh.mvpexample.model.entity.ItemImage;
 

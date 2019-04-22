@@ -39,4 +39,60 @@ public class DataImage {
 
         loadData.onLoadDataSuccess(listDemo);
     }
+
+    public void createListData1(){
+
+        ItemImage demo = new ItemImage("https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?cs=srgb&dl=beautiful-bloom-blossom-906150.jpg&fm=jpg","Meo meo");
+        ItemImage demo1 = new ItemImage("https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?cs=srgb&dl=beautiful-bloom-blossom-906150.jpg&fm=jpg","BA VT");
+        ItemImage demo2 = new ItemImage("https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?cs=srgb&dl=beautiful-bloom-blossom-906150.jpg&fm=jpg","Vũ trụ");
+        ItemImage demo3 = new ItemImage("https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?cs=srgb&dl=beautiful-bloom-blossom-906150.jpg&fm=jpg","Phi hành gia");
+        ItemImage demo4 = new ItemImage("https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?cs=srgb&dl=beautiful-bloom-blossom-906150.jpg&fm=jpg","Doremon");
+        ItemImage demo5 = new ItemImage("https://avatars2.githubusercontent.com/u/28?v=4","Thủy thủ mặt trăng");
+        ItemImage demo6 = new ItemImage("https://avatars2.githubusercontent.com/u/28?v=4","Robot");
+        ItemImage demo7 = new ItemImage("https://avatars2.githubusercontent.com/u/28?v=4","Destroy");
+        ItemImage demo8 = new ItemImage("https://avatars2.githubusercontent.com/u/28?v=4","Pháp");
+        ItemImage demo9 = new ItemImage("https://avatars2.githubusercontent.com/u/28?v=4","Hoa hướng dương");
+        ItemImage demo10 = new ItemImage("https://avatars2.githubusercontent.com/u/28?v=4","Xương rồng");
+        listDemo.add(demo);
+        listDemo.add(demo1);
+        listDemo.add(demo2);
+        listDemo.add(demo3);
+        listDemo.add(demo4);
+        listDemo.add(demo5);
+        listDemo.add(demo6);
+        listDemo.add(demo7);
+        listDemo.add(demo8);
+        listDemo.add(demo9);
+        listDemo.add(demo10);
+
+        loadData.onLoadDataSuccess(listDemo);
+    }
+
+    public void createListData2(){
+
+        ItemImage demo = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Meo meo");
+        ItemImage demo1 = new ItemImage("https://thuypetpro.com.vn/wp-content/uploads/2017/07/co-nen-cat-duoi-meo-hay-khong.jpg","BA VT");
+        ItemImage demo2 = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Vũ trụ");
+        ItemImage demo3 = new ItemImage("https://thuypetpro.com.vn/wp-content/uploads/2017/07/co-nen-cat-duoi-meo-hay-khong.jpg","Phi hành gia");
+        ItemImage demo4 = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Doremon");
+        ItemImage demo5 = new ItemImage("https://thuypetpro.com.vn/wp-content/uploads/2017/07/co-nen-cat-duoi-meo-hay-khong.jpg","Thủy thủ mặt trăng");
+        ItemImage demo6 = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Robot");
+        ItemImage demo7 = new ItemImage("https://thuypetpro.com.vn/wp-content/uploads/2017/07/co-nen-cat-duoi-meo-hay-khong.jpg","Destroy");
+        ItemImage demo8 = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Pháp");
+        ItemImage demo9 = new ItemImage("https://thuypetpro.com.vn/wp-content/uploads/2017/07/co-nen-cat-duoi-meo-hay-khong.jpg","Hoa hướng dương");
+        ItemImage demo10 = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Xương rồng");
+        listDemo.add(demo);
+        listDemo.add(demo1);
+        listDemo.add(demo2);
+        listDemo.add(demo3);
+        listDemo.add(demo4);
+        listDemo.add(demo5);
+        listDemo.add(demo6);
+        listDemo.add(demo7);
+        listDemo.add(demo8);
+        listDemo.add(demo9);
+        listDemo.add(demo10);
+
+        loadData.onLoadDataSuccess(listDemo);
+    }
 }

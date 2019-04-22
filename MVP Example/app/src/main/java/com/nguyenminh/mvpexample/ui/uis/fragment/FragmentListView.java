@@ -11,9 +11,9 @@ import android.widget.ListView;
 
 import com.nguyenminh.mvpexample.R;
 import com.nguyenminh.mvpexample.model.entity.ItemImage;
-import com.nguyenminh.mvpexample.presenter.MainPresenter;
+import com.nguyenminh.mvpexample.presenter.ListViewPresenter;
 import com.nguyenminh.mvpexample.ui.adapter.ListViewAdapter;
-import com.nguyenminh.mvpexample.ui.viewVM.MainView;
+import com.nguyenminh.mvpexample.ui.viewvm.MainView;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ import butterknife.Unbinder;
 
 public class FragmentListView extends Fragment implements MainView {
     private ListViewAdapter adapter;
-    private MainPresenter mainPresenter;
+    private ListViewPresenter listViewPresenter;
     @BindView(R.id.listview)
     ListView listView;
     private Unbinder unbinder;
@@ -37,8 +37,8 @@ public class FragmentListView extends Fragment implements MainView {
     }
 
     private void initPresenter() {
-        mainPresenter = new MainPresenter(this);
-        mainPresenter.loadData();
+        listViewPresenter = new ListViewPresenter(this);
+        listViewPresenter.loadData();
     }
     @Override
     public void showList(List<ItemImage> itemImages) {
