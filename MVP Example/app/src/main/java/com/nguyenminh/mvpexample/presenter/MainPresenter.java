@@ -20,7 +20,7 @@ public class MainPresenter implements LoadData {
     }
 
     @Override
-    public void onLoadDataSuccess(List<ItemImage> listDemo) {
-        mainView.showList(listDemo);
+    public void onLoadDataSuccess(List<ItemImage> itemImages) {
+        mainView.showList(itemImages);
     }
 }

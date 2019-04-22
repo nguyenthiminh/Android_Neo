@@ -21,7 +21,7 @@ public class DataImage {
         ItemImage demo4 = new ItemImage("https://img.thuthuatphanmem.vn/uploads/2018/09/24/anh-doremon-bong-bay_054125327.jpg","Doremon");
         ItemImage demo5 = new ItemImage("https://i.ytimg.com/vi/ZdyRer_g4xA/hqdefault.jpg","Thủy thủ mặt trăng");
         ItemImage demo6 = new ItemImage("http://teky.edu.vn/wp-content/uploads/sites/4/2018/08/robot3.jpeg","Robot");
-        ItemImage demo7 = new ItemImage("https://kenh14cdn.com/2017/photo-2-1510459495605.jpg","Hủy diệt");
+        ItemImage demo7 = new ItemImage("https://kenh14cdn.com/2017/photo-2-1510459495605.jpg","Destroy");
         ItemImage demo8 = new ItemImage("https://vevietnamairline.com/Img.ashx?636547984689865774.jpg","Pháp");
         ItemImage demo9 = new ItemImage("http://media.vietq.vn/files/lelan/2016/12/25/huong-duong-1-25-12-2016.jpg","Hoa hướng dương");
         ItemImage demo10 = new ItemImage("https://cayvahoa.net/wp-content/uploads/2016/07/xuong-rong-bong-vang.jpg","Xương rồng");

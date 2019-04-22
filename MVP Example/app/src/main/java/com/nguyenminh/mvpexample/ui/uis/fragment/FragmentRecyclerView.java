@@ -42,8 +42,8 @@ public class FragmentRecyclerView extends Fragment implements MainView {
         mainPresenter.loadData();
     }
     @Override
-    public void showList(List<ItemImage> listDemo) {
-        adapter = new RecyclerAdapter(getContext(),listDemo);
+    public void showList(List<ItemImage> itemImages) {
+        adapter = new RecyclerAdapter(getContext(),itemImages);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(adapter);
 

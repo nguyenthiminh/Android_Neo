@@ -41,8 +41,8 @@ public class FragmentListView extends Fragment implements MainView {
         mainPresenter.loadData();
     }
     @Override
-    public void showList(List<ItemImage> listDemo) {
-        adapter = new ListViewAdapter(listDemo);
+    public void showList(List<ItemImage> itemImages) {
+        adapter = new ListViewAdapter(itemImages);
         listView.setAdapter(adapter);
     }
 

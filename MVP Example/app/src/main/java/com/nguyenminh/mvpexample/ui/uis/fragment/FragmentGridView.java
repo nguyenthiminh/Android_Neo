@@ -43,8 +43,8 @@ public class FragmentGridView extends Fragment implements MainView {
     }
 
     @Override
-    public void showList(List<ItemImage> listDemo) {
-        adapter = new GridViewAdapter(listDemo);
+    public void showList(List<ItemImage> itemImages) {
+        adapter = new GridViewAdapter(itemImages);
         gridView.setNumColumns(2);
         gridView.setAdapter(adapter);
     }

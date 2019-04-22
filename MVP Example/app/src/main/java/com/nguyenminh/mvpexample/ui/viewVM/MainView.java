@@ -5,5 +5,5 @@ import com.nguyenminh.mvpexample.model.entity.ItemImage;
 import java.util.List;
 
 public interface MainView {
-    void showList(List<ItemImage> listDemo);
+    void showList(List<ItemImage> itemImages);
 }
