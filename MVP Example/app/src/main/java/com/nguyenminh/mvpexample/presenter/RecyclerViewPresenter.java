@@ -7,11 +7,11 @@ import com.nguyenminh.mvpexample.ui.viewvm.MainView;
 
 import java.util.List;
 
-public class MainPresenter implements LoadData {
+public class RecyclerViewPresenter implements LoadData {
     private DataImage dataImage;
     private MainView mainView;
 
-    public MainPresenter(MainView mainView) {
+    public RecyclerViewPresenter(MainView mainView) {
         this.mainView = mainView;
         dataImage = new DataImage(this);
     }

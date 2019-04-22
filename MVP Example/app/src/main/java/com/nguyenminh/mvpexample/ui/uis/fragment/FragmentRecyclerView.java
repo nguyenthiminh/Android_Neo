@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.nguyenminh.mvpexample.R;
 import com.nguyenminh.mvpexample.model.entity.ItemImage;
-import com.nguyenminh.mvpexample.presenter.MainPresenter;
+import com.nguyenminh.mvpexample.presenter.RecyclerViewPresenter;
 import com.nguyenminh.mvpexample.ui.adapter.RecyclerAdapter;
 import com.nguyenminh.mvpexample.ui.viewvm.MainView;
 
@@ -26,7 +26,7 @@ public class FragmentRecyclerView extends Fragment implements MainView {
     @BindView(R.id.rcv)
     RecyclerView recyclerView;
     private RecyclerAdapter adapter;
-    private MainPresenter mainPresenter;
+    private RecyclerViewPresenter recyclerViewPresenter;
     private Unbinder unbinder;
     @Nullable
     @Override
@@ -37,8 +37,8 @@ public class FragmentRecyclerView extends Fragment implements MainView {
         return v;
     }
     private void initPresenter() {
-        mainPresenter = new MainPresenter(this);
-        mainPresenter.loadData();
+        recyclerViewPresenter = new RecyclerViewPresenter(this);
+        recyclerViewPresenter.loadData();
     }
     @Override
     public void showList(List<ItemImage> itemImages) {
