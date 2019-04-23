@@ -53,7 +53,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
         return itemImages.size();
     }
 
-
 }
 
 class RecyclerViewHolder extends RecyclerView.ViewHolder {

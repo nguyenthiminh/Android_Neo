@@ -28,25 +28,45 @@ public class FragmentGridView extends Fragment implements MainView {
     private GridViewAdapter adapter;
     private GridViewPresenter gridViewPresenter;
     private Unbinder unbinder;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        gridViewPresenter = new GridViewPresenter();
+        gridViewPresenter.attachView(this);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_gridview, container, false);
         unbinder = ButterKnife.bind(this, v);
-        initPresenter();
         return v;
     }
 
-    private void initPresenter() {
-        gridViewPresenter = new GridViewPresenter(this);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        init();
         gridViewPresenter.loadData();
+    }
+
+    private void init() {
+        adapter = new GridViewAdapter(gridViewPresenter.itemImages);
+        gridView.setNumColumns(2);
+        gridView.setAdapter(adapter);
     }
 
     @Override
     public void showList(List<ItemImage> itemImages) {
-        adapter = new GridViewAdapter(itemImages);
-        gridView.setNumColumns(2);
-        gridView.setAdapter(adapter);
+       if(!(itemImages == null && itemImages.isEmpty())){
+           gridViewPresenter.itemImages.clear();
+           gridViewPresenter.itemImages.addAll(itemImages);
+           adapter.notifyDataSetChanged();
+       }
+       else {
+
+       }
     }
 
     @Override

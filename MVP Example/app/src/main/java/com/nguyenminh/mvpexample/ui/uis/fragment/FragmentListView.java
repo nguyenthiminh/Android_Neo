@@ -27,23 +27,43 @@ public class FragmentListView extends Fragment implements MainView {
     @BindView(R.id.listview)
     ListView listView;
     private Unbinder unbinder;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        listViewPresenter = new ListViewPresenter();
+        listViewPresenter.attachView(this);
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_listview, container, false);
         unbinder = ButterKnife.bind(this, v);
-        initPresenter();
         return v;
     }
 
-    private void initPresenter() {
-        listViewPresenter = new ListViewPresenter(this);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initView();
         listViewPresenter.loadData();
     }
+
+    private void initView() {
+        adapter = new ListViewAdapter(listViewPresenter.imageList);
+        listView.setAdapter(adapter);
+    }
+
     @Override
     public void showList(List<ItemImage> itemImages) {
-        adapter = new ListViewAdapter(itemImages);
-        listView.setAdapter(adapter);
+        if(!(itemImages == null && itemImages.isEmpty())){
+            listViewPresenter.imageList.clear();
+            listViewPresenter.imageList.addAll(itemImages);
+            adapter.notifyDataSetChanged();
+        }
+        else {
+
+        }
     }
 
     @Override
