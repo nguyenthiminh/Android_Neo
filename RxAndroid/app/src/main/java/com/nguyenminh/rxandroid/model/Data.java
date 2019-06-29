@@ -1,10 +1,7 @@
 package com.nguyenminh.rxandroid.model;
 
 import android.util.Log;
-import android.util.Pair;
 
-import com.nguyenminh.rxandroid.api.ApiClient;
-import com.nguyenminh.rxandroid.api.ApiInterface;
 import com.nguyenminh.rxandroid.api.ApiService;
 import com.nguyenminh.rxandroid.model.entity.DetailPerson;
 import com.nguyenminh.rxandroid.model.entity.Person;
@@ -13,19 +10,11 @@ import com.nguyenminh.rxandroid.model.entity.UserAndDetail;
 import java.util.ArrayList;
 import java.util.List;
 
-
-import butterknife.Unbinder;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.BiFunction;
-import io.reactivex.functions.Consumer;
-import io.reactivex.observers.ResourceObserver;
 import io.reactivex.schedulers.Schedulers;
-
-import rx.Subscriber;
-import rx.functions.Func2;
 
 import static android.support.constraint.Constraints.TAG;
 
@@ -70,39 +59,30 @@ public class Data {
         Observable<List<Person>> listObservable = ApiService.getApiInterface().getPerson()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
-
         Observable<DetailPerson> detailPersonObservable = ApiService.getApiInterface().getDeail("roland")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
-
         Observable.zip(listObservable, detailPersonObservable,
-                new BiFunction<List<Person>, DetailPerson, UserAndDetail>() {
-                    @Override
-                    public UserAndDetail apply(List<Person> personList, DetailPerson detailPerson) throws Exception {
-                        return new UserAndDetail(personList, detailPerson);
-                    }
-                }).subscribe(new Observer<UserAndDetail>() {
-
+                (personList, detailPerson) -> new UserAndDetail(personList, detailPerson)).subscribe(new Observer<UserAndDetail>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
                     }
 
                     @Override
                     public void onNext(UserAndDetail userAndDetail) {
                         Log.d(TAG, "onNext: "+userAndDetail.getPersonList().size());
                         personArrayList.addAll(userAndDetail.getPersonList());
+                        detailPerson = userAndDetail.getDetailPerson();
 
                     }
-
                     @Override
                     public void onError(Throwable e) {
-
                     }
 
                     @Override
                     public void onComplete() {
                         loadDataApi.loadDataPerson(personArrayList);
+                        loadDataApi.loadDataDetailPerson(detailPerson);
                     }
                 });
 //                .subscribe(data -> {

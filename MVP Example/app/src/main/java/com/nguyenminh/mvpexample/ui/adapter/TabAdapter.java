@@ -45,7 +45,7 @@ public class TabAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "RecyclerView";
+                return null;
             case 1:
                 return "ListView";
             case 2:

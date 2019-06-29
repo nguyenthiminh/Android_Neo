@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Neo Cloud</string>
+    <string name="choose_date">Chọn ngày</string>
+    <string name="choose_show">Thứ tự hiển thị</string>
+    <string name="work_report">Báo cáo công việc</string>
+    <string name="work_list">Danh sách công việc</string>
+    <string name="no_data">Không có dữ liệu hiển thị</string>
+    <string name="work_detail_report">Báo cáo chi tiết</string>
+    <string name="number_hour">Số giờ thực hiện</string>
+    <string name="number_hour_need">Số giờ cần</string>
+    <string name="percent">% Hoàn thành</string>
+    <string name="result">Kết quả thực hiện: </string>
+    <string name="report_approval">Duyệt báo cáo</string>
+    <string name="maCongViec">Mã công việc</string>
+    <string name="id_employees">Mã nhân viên</string>
+    <string name="date_report">Ngày báo cáo</string>
+    <string name="textSearch">Tìm kiếm</string>
+    <string name="work_list_approval">Danh sách công việc cần duyệt</string>
+    <string name="approval">Duyệt</string>
+    <string name="review_approval">Xem và duyệt</string>
+    <string name="work_next">Công việc tiếp theo</string>
+    <string name="dateLine">Thời hạn(nếu có):</string>
+    <string name="btn_delete">Xóa</string>
+    <string name="btn_update">Cập nhật</string>
+    <string name="salary_advance">Đăng ký tạm ứng</string>
+    <string name="employees">Người đề nghị</string>
+    <string name="status">Trạng thái</string>
+    <string name="date_advance">Ngày đề nghị</string>
+    <string name="date_approval">Ngày duyệt chi</string>
+    <string name="setup_advance">Lập đề nghị tạm ứng</string>
+    <string name="advance_list">Danh sách các đề nghị tạm ứng</string>
+    <string name="setup_salary_advance">Thiết lập đề nghị tạm ứng</string>
+    <string name="day_pay">Hạn thanh toán</string>
+    <string name="money">Số tiền</string>
+    <string name="reason">Lý do</string>
+    <string name="btn_setup">Ghi lại</string>
+    <string name="detail_salary_advance">Chi tiết đề nghị tạm ứng</string>
+    <string name="sum_money">Tổng số tiền</string>
+    <string name="string_money">Tổng tiền bằng chữ</string>
+    <string name="text_search">Tra cứu văn bản</string>
+    <string name="trichyeu">Trích yếu</string>
+    <string name="id_text">Mã số</string>
+    <string name="kind_text">Loại văn bản</string>
+    <string name="ngayphathanh">Ngày phát hành</string>
+    <string name="ngayPH">Ngày PH</string>
+    <string name="phathanhden">Phát hành đến</string>
+    <string name="nguuoixuly">Người xử lý</string>
+    <string name="vaitro">Vai trò</string>
+    <string name="donvi">Đơn vị</string>
+    <string name="title">Tiêu đề</string>
+    <string name="thoihanxuly">Thời hạn xử lý</string>
+    <string name="noigui">Nơi gửi</string>
+
+    <string-array name="options_show">
+        <item>Theo đơn vị</item>
+        <item>Theo công việc/ dự án</item>
+        <item>Theo trạng thái</item>
+    </string-array>
+
+    <string-array name="options_status">
+        <item>Mới giao</item>
+        <item>Đang thực hiện</item>
+        <item>Hoàn thành</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Đang chờ duyệt</item>
+        <item>Đã duyệt</item>
+        <item>Không duyệt</item>
+    </string-array>
+
+    <string-array name="kind">
+        <item>VNĐ</item>
+        <item>USD</item>
+    </string-array>
+
+    <string-array name="kind_text">
+        <item>Không chọn</item>
+        <item>VB hành chính</item>
+        <item>Tài liệu</item>
+    </string-array>
+</resources>

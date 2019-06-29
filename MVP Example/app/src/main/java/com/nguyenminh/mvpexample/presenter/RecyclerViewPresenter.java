@@ -6,14 +6,17 @@ import com.nguyenminh.mvpexample.model.entity.ItemImage;
 import com.nguyenminh.mvpexample.ui.viewvm.MainView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class RecyclerViewPresenter implements LoadData, Presenter<MainView> {
     private DataImage dataImage;
     private MainView mainView;
+    private Calendar calendar;
     public ArrayList<ItemImage> listImage = new ArrayList<>();
     public RecyclerViewPresenter() {
         dataImage = new DataImage(this);
+        calendar = Calendar.getInstance();
     }
 
     public void loadData() {

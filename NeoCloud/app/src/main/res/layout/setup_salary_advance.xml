@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center_vertical"
+        android:paddingStart="?actionBarSize"
+        android:text="@string/setup_salary_advance"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_14sdp" />
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="?actionBarSize"
+        android:src="@drawable/ic_back"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="?actionBarSize" />
+
+    <TextView
+        android:id="@+id/tv_employees"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:text="@string/employees"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/edt_employeesName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_toRightOf="@id/tv_employees"
+        android:background="@drawable/bg_editext"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="CV01"
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/date_advance"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/tv_employees"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/date_advance"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:id="@+id/layout_date_advance"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/tv_employees"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_toRightOf="@id/date_advance"
+        android:background="@drawable/bg_editext"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:weightSum="7">
+
+        <ImageView
+            android:id="@+id/iv_rewind_suggest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fast_rewind" />
+
+        <TextView
+            android:id="@+id/tv_date_suggest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:hint="MM/dd/yyyy"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/iv_forward_suggest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fast_forward" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/day_pay"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/date_advance"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/day_pay"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:id="@+id/layout_day_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/layout_date_advance"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_toRightOf="@id/date_advance"
+        android:background="@drawable/bg_editext"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:weightSum="7">
+
+        <ImageView
+            android:id="@+id/iv_rewind_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fast_rewind" />
+
+        <TextView
+            android:id="@+id/tv_date_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:hint="MM/dd/yyyy"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/iv_forward_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fast_forward" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_money"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout_day_pay"
+        android:layout_margin="@dimen/_12sdp"
+        android:weightSum="4"
+        android:layout_height="@dimen/_38sdp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_below="@id/date_advance"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/money"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+        <EditText
+            android:id="@+id/edt_money"
+            android:layout_width="0dp"
+            android:layout_weight="2.2"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="500 000"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <Spinner
+            android:id="@+id/spinner_kind"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/kind"
+            android:theme="@style/spinner" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/layout_money"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/reason"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+    <EditText
+        android:id="@+id/edt_reason"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_112sdp"
+        android:layout_below="@id/tv_reason"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:background="@drawable/bg_editext"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="Lý do"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/edt_reason"
+        android:layout_margin="@dimen/_12sdp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="@dimen/_38sdp">
+
+        <Button
+            android:id="@+id/btn_setup"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/btn_setup"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/bg_button"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/btn_delete"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/bg_button_delete"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>

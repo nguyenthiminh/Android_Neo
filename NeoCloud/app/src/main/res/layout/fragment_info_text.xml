@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/_12sdp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/kindText"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/kind_text"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_kindText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_toRightOf="@id/kindText"
+            android:background="@drawable/bg_spinner"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="9"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/idText"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/kindText"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/id_text"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_idText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_kindText"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/idText"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_idText"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/title"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_idText"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/trichyeu"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/trichyeu"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_trichyeu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_76sdp"
+            android:layout_below="@id/tv_title"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:paddingLeft="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/timePH"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_trichyeu"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/ngayphathanh"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_dayPH"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_trichyeu"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/timeXuly"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/timePH"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/thoihanxuly"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_timeXuly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_dayPH"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+        <TextView
+            android:id="@+id/noigui"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/timeXuly"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/noigui"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_noigui"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_timeXuly"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="@dimen/_92sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/noigui"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center_vertical"
+            android:text="@string/status"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/tv_noigui"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/bg_spinner"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="8"
+            android:inputType="number"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+</ScrollView>

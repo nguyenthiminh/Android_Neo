@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_12sdp"
+        android:text="người duyệt"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_16sdp" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:src="@drawable/ic_search" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar">
+
+        <!--<TextView-->
+        <!--android:id="@+id/title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/_25sdp"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:fontFamily="@font/quicksand_medium"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:paddingLeft="@dimen/_12sdp"-->
+        <!--android:text="@string/advance_list"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="@dimen/_12sdp" />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_advance_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:background="#ffffff"
+        android:paddingVertical="@dimen/_12sdp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/layout_search"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar">
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_employees"-->
+        <!--android:layout_width="@dimen/_92sdp"-->
+        <!--android:layout_height="@dimen/_38sdp"-->
+        <!--android:layout_marginLeft="@dimen/_12sdp"-->
+        <!--android:fontFamily="@font/quicksand_medium"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="@string/employees"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="@dimen/_12sdp" />-->
+
+        <neo.vn.neocloud.presentasion.widget.CustomEditText
+            android:id="@+id/edt_employeesName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:background="@drawable/bg_editext"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="@string/MaNhanVien"
+            android:padding="@dimen/_12sdp"
+            android:textSize="@dimen/_12sdp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_status"-->
+        <!--android:layout_width="@dimen/_92sdp"-->
+        <!--android:layout_height="@dimen/_38sdp"-->
+        <!--android:layout_below="@id/tv_employees"-->
+        <!--android:layout_marginLeft="@dimen/_12sdp"-->
+        <!--android:layout_marginTop="@dimen/_12sdp"-->
+        <!--android:fontFamily="@font/quicksand_medium"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="@string/status"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="@dimen/_12sdp" />-->
+
+        <Spinner
+            android:id="@+id/spinner_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/edt_employeesName"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_spinner"
+            android:theme="@style/spinner" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/date_advance"-->
+        <!--android:layout_width="@dimen/_92sdp"-->
+        <!--android:layout_height="@dimen/_38sdp"-->
+        <!--android:layout_below="@id/tv_status"-->
+        <!--android:layout_marginLeft="@dimen/_12sdp"-->
+        <!--android:layout_marginTop="@dimen/_12sdp"-->
+        <!--android:fontFamily="@font/quicksand_medium"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="@string/date_advance"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="@dimen/_12sdp" />-->
+
+        <LinearLayout
+            android:id="@+id/layout_date_advance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/spinner_status"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_editext"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:weightSum="7">
+
+            <ImageView
+                android:id="@+id/iv_rewind_suggest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_fast_rewind" />
+
+            <neo.vn.neocloud.presentasion.widget.CustomEditText
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/tv_date_suggest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textSize="@dimen/_12sdp"
+                android:background="@drawable/bg_textview"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center"
+                android:hint="@string/date_advance"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/iv_forward_suggest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_fast_forward" />
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/date_approval"-->
+        <!--android:layout_width="@dimen/_92sdp"-->
+        <!--android:layout_height="@dimen/_38sdp"-->
+        <!--android:layout_below="@id/date_advance"-->
+        <!--android:layout_marginLeft="@dimen/_12sdp"-->
+        <!--android:layout_marginTop="@dimen/_12sdp"-->
+        <!--android:fontFamily="@font/quicksand_medium"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="@string/date_approval"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="@dimen/_12sdp" />-->
+
+        <LinearLayout
+            android:id="@+id/layout_date_approval"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_below="@id/layout_date_advance"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_editext"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:weightSum="7">
+
+            <ImageView
+                android:id="@+id/iv_rewind_approval"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_fast_rewind" />
+
+            <neo.vn.neocloud.presentasion.widget.CustomEditText
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:id="@+id/tv_date_approval"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center"
+                android:background="@drawable/bg_textview"
+                android:textSize="@dimen/_12sdp"
+                android:hint="@string/date_approval"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/iv_forward_approval"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_fast_forward" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_below="@+id/layout_date_approval"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_delete"
+                android:drawableLeft="@drawable/ic_search"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:text="@string/textSearch"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/btn_setup_advance"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_button"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:text="@string/setup_advance"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

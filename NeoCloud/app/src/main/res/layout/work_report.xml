@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="@string/work_report"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_14sdp" />
+
+    <TextView
+        android:id="@+id/tv_choose_date"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:text="@string/choose_date"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_toRightOf="@id/tv_choose_date"
+        android:background="@drawable/bg_editext"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:weightSum="7">
+
+        <ImageView
+            android:id="@+id/iv_rewind"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fast_rewind" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:hint="MM/dd/yyyy"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/iv_forward"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fast_forward" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_options_show"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/tv_choose_date"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:text="@string/choose_show"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/tv_choose_date"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_toRightOf="@id/tv_options_show"
+        android:background="@drawable/bg_spinner"
+        android:entries="@array/options_show"
+        android:theme="@style/spinner" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/spinner"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_12sdp"
+        android:text="@string/work_list"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_12sdp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_work_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/no_data"
+        android:textColor="#000000"
+        android:visibility="gone" />
+</RelativeLayout>

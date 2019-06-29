@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="@string/text_search"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_14sdp" />
+
+    <TextView
+        android:id="@+id/tv_id_work"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:text="@string/maCongViec"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/edt_idWork"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/action_bar"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_toRightOf="@id/tv_id_work"
+        android:background="@drawable/bg_editext"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="CV01"
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/tv_id_employees"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/tv_id_work"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/id_employees"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/edt_idEmployees"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/edt_idWork"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_toRightOf="@id/tv_id_employees"
+        android:background="@drawable/bg_editext"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="NV01"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:padding="@dimen/_12sdp"
+        android:textSize="@dimen/_12sdp" />
+    <TextView
+        android:id="@+id/date_report"
+        android:layout_width="@dimen/_92sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@id/tv_id_employees"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/date_report"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/textSearch"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/quicksand_bold"
+        android:drawableLeft="@drawable/ic_search"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@id/date_report"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_38sdp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/btn_search"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_12sdp"
+        android:text="@string/work_list_approval"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_12sdp" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@id/title"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

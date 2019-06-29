@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.nguyenminh.rxandroid.R;
+import com.nguyenminh.rxandroid.model.entity.DetailPerson;
 import com.nguyenminh.rxandroid.model.entity.Person;
 import com.nguyenminh.rxandroid.presenter.MainPresenter;
 import com.nguyenminh.rxandroid.ui.adapter.RecyclerAdapter;
@@ -45,5 +46,15 @@ public class MainActivity extends AppCompatActivity implements MainView {
         presenter.personList.clear();
         presenter.personList.addAll(personList);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void displayResult(DetailPerson person) {
+
+    }
+
+    @Override
+    public void displayError(String error) {
+
     }
 }

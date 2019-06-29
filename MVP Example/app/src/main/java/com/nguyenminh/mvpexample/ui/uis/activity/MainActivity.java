@@ -13,6 +13,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+    private int[] icons = {
+            R.drawable.ic_home,
+            R.drawable.ic_attach,
+            R.drawable.ic_search_white_24dp
+    };
     @BindView (R.id.viewPager) ViewPager viewPager;
     @BindView(R.id.tabLayout) TabLayout tabLayout;
     private TabAdapter tabAdapter;
@@ -30,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         tabAdapter = new TabAdapter(getSupportFragmentManager());
         viewPager.setAdapter(tabAdapter);
         tabLayout.setupWithViewPager(viewPager);
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            tabLayout.getTabAt(i).setIcon(icons[i]);
+        }
 
     }
 }
